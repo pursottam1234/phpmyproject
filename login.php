@@ -5,7 +5,9 @@
      <link rel="stylesheet" href="css/style.css">
     </head>
 <body>
-<?php include('include/nav.php');?>
+<?php include('include/nav.php');
+
+?>
  
 <div class="container">
     <div class="row justify-content-md-center">
@@ -28,7 +30,7 @@
                 </form>
                 </div>
 
-                <?php include('include/message.php'); ?>
+                <?php include('include/message.php');?>
             </div>
         </div>
     </div>

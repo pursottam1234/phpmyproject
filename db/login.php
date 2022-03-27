@@ -1,5 +1,6 @@
 <?php
 include('connect.php');
+session_start();
 if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -22,10 +23,10 @@ if(isset($_POST['submit'])){
         session_start();
         $_SESSION['login']=1;
         $_SESSION['user_id']= $data['id'];
-
         header('Location:../home.php');
     }else{
         header('Location:../login.php?errmsg=email and password doesnot match');
     }
+    include('display.php');
 }
 ?>

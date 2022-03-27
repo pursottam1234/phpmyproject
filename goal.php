@@ -11,6 +11,7 @@ $data = mysqli_fetch_assoc($result);
 
 $goalQuery = "SELECT * FROM goal";
 $goalResult = mysqli_query($conn, $goalQuery);
+include("include/nav.php");
 ?>
 
 <html>
@@ -108,6 +109,7 @@ $goalResult = mysqli_query($conn, $goalQuery);
                     }
                 });
             }
+            
         </script>
        
     </body>

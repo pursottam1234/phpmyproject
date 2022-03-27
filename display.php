@@ -24,11 +24,11 @@ $id = $_SESSION['user_id'];
                     $query="SELECT * FROM goal WHERE user_id='$id'";
                     $display= mysqli_query($conn, $query);
                     ?>
-                            <table class="table" style="color: #00FFFF;">
+                            <table class="table justify-content-center" style="color: #00FFFF;">
                                 <thead>
                                     <th>Goal Title</th>
-                                    <th>Descriptions:</th>
-                                    <th>Accomplish Date:</th>
+                                    <th>Descriptions</th>
+                                    <th>Accomplish Date</th>
                                 </thead>
                                 <tbody>
                                     <?php while($row= mysqli_fetch_assoc($display)){ ?>
