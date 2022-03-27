@@ -65,8 +65,8 @@ include("include/nav.php");
                             <table class="table" style="color: #00FFFF;">
                                 <thead>
                                     <th>Goal Title</th>
-                                    <th>Descriptions:</th>
-                                    <th>Accomplish Date:</th>
+                                    <th>Descriptions</th>
+                                    <th>Accomplish Date</th>
                                     <th>Action</th>
                                 </thead>
                                 <tbody>
