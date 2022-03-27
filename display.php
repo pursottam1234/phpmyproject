@@ -1,9 +1,13 @@
 <?php
-session_start();
-if(!isset($_SESSION['login']) || !$_SESSION['login']==1){
-    header('Location:login.php');
-}
+
 $id = $_SESSION['user_id'];
+include('db/connect.php');
+$query = "SELECT * FROM users WHERE id='$id'";
+$result = mysqli_query($conn, $query);
+$data = mysqli_fetch_assoc($result);
+
+$goalQuery = "SELECT * FROM goal WHERE user_id='$id'";
+$goalResult = mysqli_query($conn,$goalQuery);
 ?>
 
 
@@ -24,7 +28,7 @@ $id = $_SESSION['user_id'];
                     $query="SELECT * FROM goal WHERE user_id='$id'";
                     $display= mysqli_query($conn, $query);
                     ?>
-                            <table class="table justify-content-center" style="color: #00FFFF;">
+                            <!-- <table class="table justify-content-center" style="color: #00FFFF;">
                                 <thead>
                                     <th>Goal Title</th>
                                     <th>Descriptions</th>
@@ -38,7 +42,7 @@ $id = $_SESSION['user_id'];
                                             <td><?php echo $row['accomplish_date'];?></td>
                                         </tr>
                                     <?php } ?>
-                                </tbody>
+                                </tbody> -->
                             </table>
         
                     </div>

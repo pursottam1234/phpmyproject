@@ -56,6 +56,7 @@ include("include/nav.php");
                     </form>
                     <?php include('include/message.php'); ?>
                     <div class="row justify-content-md-center" style="color: #CD5C5C">
+                    <?php include('display.php');?>
                         <?php 
                         if(mysqli_num_rows($goalResult)==0){
                             echo "<h3>Oops! sorry, there is no any goal titles...</h3>";
